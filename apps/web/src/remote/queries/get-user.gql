@@ -1,0 +1,20 @@
+query GetUser($id: ID!) {
+	user(id: $id) {
+		id
+		firstName
+		lastName
+		fullName
+		posts {
+			id
+			title
+		}
+		comments {
+			id
+			comment
+			post {
+				id
+				title
+			}
+		}
+	}
+}

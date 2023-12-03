@@ -1,0 +1,16 @@
+query GetPosts($skip: Int, $take: Int) {
+	posts(skip: $skip, take: $take) {
+		id
+		title
+		content
+		author {
+			id
+			firstName
+			lastName
+		}
+		comments {
+			id
+			comment
+		}
+	}
+}
