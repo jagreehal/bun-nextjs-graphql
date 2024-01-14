@@ -1,6 +1,6 @@
 'use client';
 
-import { useGetPostsQuery } from '@/remote/gql-generated';
+import { useGetPostsQuery } from '@/graphql/generated';
 
 export function ClientComponent() {
 	const { data, isLoading } = useGetPostsQuery();

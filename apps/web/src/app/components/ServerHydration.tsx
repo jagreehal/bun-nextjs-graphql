@@ -1,6 +1,6 @@
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
-import { serverPreFetch } from '@/remote/query-utils';
-import { useGetPostQuery } from '@/remote/gql-generated';
+import { serverPreFetch } from '@/graphql/query-utils';
+import { useGetPostQuery } from '@/graphql/gql-generated';
 import { ClientPreFetch } from './ClientPreFetch';
 
 export async function ServerHydration() {

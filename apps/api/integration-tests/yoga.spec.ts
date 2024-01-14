@@ -1,8 +1,8 @@
 import type { TypedDocumentNode } from '@graphql-typed-document-node/core';
 import { type ExecutionResult, print } from 'graphql';
 import { describe, expect, it } from 'bun:test';
-import { graphql } from './gql';
 import { yoga } from '../src/yoga';
+import { graphql } from './gql';
 
 function executeOperation<TResult, TVariables>(
 	operation: TypedDocumentNode<TResult, TVariables>,

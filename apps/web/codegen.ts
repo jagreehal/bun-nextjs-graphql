@@ -5,7 +5,7 @@ const config: CodegenConfig = {
 	overwrite: true,
 	documents: './src/**/*.gql',
 	generates: {
-		'./src/remote/gql-generated.ts': {
+		'./src/graphql/generated.ts': {
 			plugins: [
 				'typescript',
 				'typescript-operations',

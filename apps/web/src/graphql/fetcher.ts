@@ -14,7 +14,7 @@ export const fetcher = <TData, TVariables>(
 ) => {
 	return async (): Promise<TData> => {
 		const { next, cache, ...restOptions } = options || {};
-		const res = await fetch(
+		const response = await fetch(
 			process.env.API_URL || 'http://localhost:8082/graphql',
 			{
 				method: 'POST',
@@ -28,7 +28,7 @@ export const fetcher = <TData, TVariables>(
 			},
 		);
 
-		const json = await res.json();
+		const json = await response.json();
 
 		if (json.errors) {
 			const { message } = json.errors[0];

@@ -1,5 +1,5 @@
-import { serverFetch } from '@/remote/query-utils';
-import { useGetPostsQuery } from '@/remote/gql-generated';
+import { serverFetch } from '@/graphql/query-utils';
+import { useGetPostsQuery } from '@/graphql/gql-generated';
 
 export async function ServerComponent() {
 	const { posts } = await serverFetch(useGetPostsQuery, {
@@ -7,7 +7,7 @@ export async function ServerComponent() {
 	});
 
 	if (!posts) {
-		return null;
+		return;
 	}
 
 	return (
